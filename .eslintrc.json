@@ -108,7 +108,8 @@
     {
       "files": [
         "satellite.js",
-        "point.js"
+        "point.js",
+        "circle.js"
       ],
       "rules": {
         "no-magic-numbers": "off",

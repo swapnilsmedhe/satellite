@@ -1,4 +1,7 @@
+const { Point } = require('./point.js');
 const { Style } = require('./style.js');
+
+const toRadian = (angle) => Math.PI * (angle / 180);
 
 class Circle {
   constructor(radius, center) {
@@ -10,6 +13,14 @@ class Circle {
     return otherCircle instanceof Circle &&
       this.center.equals(otherCircle.center) &&
       this.radius === otherCircle.radius;
+  }
+
+  moveAround(pole, rotationalAngle) {
+    const distance = this.center.distanceBetween(pole);
+    const angleInRadian = toRadian(rotationalAngle);
+    const x = distance * Math.cos(angleInRadian) + pole.x;
+    const y = distance * Math.sin(angleInRadian) + pole.y;
+    return new Circle(this.radius, new Point(x, y));
   }
 
   toHTML() {
