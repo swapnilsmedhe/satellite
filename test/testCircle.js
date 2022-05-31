@@ -18,7 +18,7 @@ describe('Circle', () => {
   it('should generate HTML for Circle', () => {
     const circle = new Circle(5, new Point(50, 50));
     const actual = circle.toHTML();
-    const expected = '<div style="top: 55;left: 45;height: 10;width: 10;border: 1px solid black;border-radius: 50%"></div>';
+    const expected = '<div style="position: absolute;top: 45;left: 45;height: 10;width: 10;border: 1px solid black;border-radius: 50%"></div>';
 
     assert.strictEqual(actual, expected);
   });

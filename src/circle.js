@@ -14,8 +14,9 @@ class Circle {
 
   toHTML() {
     const style = new Style();
-    const projectionPoint = this.center.offsetBy(-this.radius, this.radius);
+    const projectionPoint = this.center.offsetBy(-this.radius, -this.radius);
 
+    style.addAttribute('position', 'absolute');
     style.addAttribute('top', projectionPoint.y);
     style.addAttribute('left', projectionPoint.x);
     style.addAttribute('height', this.radius * 2);
