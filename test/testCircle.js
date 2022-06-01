@@ -27,7 +27,7 @@ describe('Circle', () => {
     const circle = new Circle(10, new Point(100, 50));
     const actual = circle.moveAround(new Point(50, 50), 90);
     const expected = new Circle(10, new Point(50, 100));
-    assert.deepStrictEqual(actual, expected);
+    assert.ok(actual.equals(expected));
   });
 
   it('should move a circle by 180deg around a given point', () => {
