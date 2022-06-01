@@ -17,7 +17,7 @@ class Point {
     return new Point(this.x + offsetX, this.y + offsetY);
   }
 
-  distanceBetween(otherPoint) {
+  distanceFrom(otherPoint) {
     return Math.hypot(otherPoint.x - this.x, otherPoint.y - this.y);
   }
 }

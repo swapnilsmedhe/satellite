@@ -31,7 +31,7 @@ describe('Point', () => {
   it('should calculate distance between two points', () => {
     const point1 = new Point(8, 0);
     const point2 = new Point(0, 0);
-    const actual = point1.distanceBetween(point2);
+    const actual = point1.distanceFrom(point2);
     const expected = 8;
     assert.strictEqual(actual, expected);
   });
@@ -39,7 +39,7 @@ describe('Point', () => {
   it('should calculate distance two negative points', () => {
     const point1 = new Point(3, -2);
     const point2 = new Point(-5, 4);
-    const actual = point1.distanceBetween(point2);
+    const actual = point1.distanceFrom(point2);
     const expected = 10;
     assert.strictEqual(actual, expected);
   });

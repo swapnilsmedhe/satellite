@@ -16,7 +16,7 @@ class Circle {
   }
 
   revolve(pole, angularDisplacement) {
-    const distanceFromPole = this.center.distanceBetween(pole);
+    const distanceFromPole = this.center.distanceFrom(pole);
     const displacementInRadians = toRadian(angularDisplacement);
     const abscissa = distanceFromPole * Math.cos(displacementInRadians);
     const ordinate = distanceFromPole * Math.sin(displacementInRadians);
