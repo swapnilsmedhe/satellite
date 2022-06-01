@@ -13,7 +13,7 @@ class Point {
       isEqualUptoTwoDecimal(this.y, otherPoint.y);
   }
 
-  offsetBy(offsetX, offsetY) {
+  translate(offsetX, offsetY) {
     return new Point(this.x + offsetX, this.y + offsetY);
   }
 

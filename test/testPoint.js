@@ -14,16 +14,16 @@ describe('Point', () => {
     assert.ok(!point1.equals(point2));
   });
 
-  it('should offset the point by given positive values', () => {
+  it('should translate the point by given positive offsets', () => {
     const point = new Point(0, 0);
-    const actual = point.offsetBy(1, 2);
+    const actual = point.translate(1, 2);
     const expected = new Point(1, 2);
     assert.deepStrictEqual(actual, expected);
   });
 
-  it('should offset the point by given negative values', () => {
+  it('should translate the point by given negative offsets', () => {
     const point = new Point(0, 2);
-    const actual = point.offsetBy(-3, -4);
+    const actual = point.translate(-3, -4);
     const expected = new Point(-3, -2);
     assert.deepStrictEqual(actual, expected);
   });
