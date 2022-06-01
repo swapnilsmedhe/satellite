@@ -1,7 +1,5 @@
 const { Style } = require('./style.js');
 
-const toRadian = (angle) => Math.PI * (angle / 180);
-
 class Circle {
   constructor(radius, center) {
     this.radius = radius;
@@ -16,7 +14,7 @@ class Circle {
 
   revolve(pole, angularDisplacement) {
     const distanceFromPole = this.center.distanceFrom(pole);
-    const displacementInRadians = toRadian(angularDisplacement);
+    const displacementInRadians = angularDisplacement.toRadian();
 
     const abscissa = distanceFromPole * Math.cos(displacementInRadians);
     const ordinate = distanceFromPole * Math.sin(displacementInRadians);
