@@ -15,11 +15,13 @@ class Circle {
       this.radius === otherCircle.radius;
   }
 
-  moveAround(pole, rotationalAngle) {
-    const distance = this.center.distanceBetween(pole);
-    const angleInRadian = toRadian(rotationalAngle);
-    const x = distance * Math.cos(angleInRadian) + pole.x;
-    const y = distance * Math.sin(angleInRadian) + pole.y;
+  revolve(pole, angularDisplacement) {
+    const distanceFromPole = this.center.distanceBetween(pole);
+    const displacementInRadians = toRadian(angularDisplacement);
+    const abscissa = distanceFromPole * Math.cos(displacementInRadians);
+    const ordinate = distanceFromPole * Math.sin(displacementInRadians);
+    const x = abscissa + pole.x;
+    const y = ordinate + pole.y;
     return new Circle(this.radius, new Point(x, y));
   }
 
