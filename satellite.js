@@ -5,6 +5,6 @@ const { Point } = require('./src/point.js');
 const orbit = new Circle(100, new Point(400, 400));
 const satellite = new Circle(20, new Point(300, 400));
 
-const html = satellite.moveAround(new Point(400, 400), 450).toHTML();
+const html = satellite.revolve(new Point(400, 400), 90).toHTML();
 
 fs.writeFileSync('satellite.html', orbit.toHTML() + html, 'utf8');
