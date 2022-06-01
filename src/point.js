@@ -1,5 +1,5 @@
-// Rename function 
-const isRoundEqual = (num1, num2) => num1.toFixed(2) === num2.toFixed(2);
+const isEqualUptoTwoDecimal = (num1, num2) =>
+  num1.toFixed(2) === num2.toFixed(2);
 
 class Point {
   constructor(x, y) {
@@ -9,8 +9,8 @@ class Point {
 
   equals(otherPoint) {
     return otherPoint instanceof Point &&
-      isRoundEqual(this.x, otherPoint.x) &&
-      isRoundEqual(this.y, otherPoint.y);
+      isEqualUptoTwoDecimal(this.x, otherPoint.x) &&
+      isEqualUptoTwoDecimal(this.y, otherPoint.y);
   }
 
   offsetBy(offsetX, offsetY) {
